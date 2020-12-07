@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.client();
 
-
 // taken liberally from https://stackoverflow.com/questions/47548081/send-scheduled-message
 // send notification of weekly games night
 client.login(process.env.CLIENT_ID).then(() => {
