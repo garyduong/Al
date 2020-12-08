@@ -3,8 +3,9 @@ const client = new Discord.client();
 
 // taken liberally from https://stackoverflow.com/questions/47548081/send-scheduled-message
 // send notification of weekly games night
-exports.helloWorld = (req, res) => {
-    let message = req.query.message || req.body.message || client.login(process.env.CLIENT_ID).then(() => {
+exports.handler = (req, res) => {
+    let message = req.query.message || req.body.message || 'Hello World!';
+    client.login(process.env.CLIENT_ID).then(() => {
         var guild = client.guilds.get(process.env.GUILD_ID);
         if (guild && guild.channels.get(process.env.CHANNEL_ID)) {
             guild.channels.get(process.env.CHANNEL_ID).send(
