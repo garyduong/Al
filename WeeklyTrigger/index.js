@@ -8,7 +8,7 @@ module.exports = async function (context, myTimer) {
 // send notification of weekly games night
 async function send_announcement() {
     const Discord = require('discord.js');
-    const client = new Discord.client();
+    const client = new Discord.Client();
     return await client.login(process.env.CLIENT_ID).then(() => {
         var guild = client.guilds.get(process.env.GUILD_ID);
         if (guild && guild.channels.get(process.env.CHANNEL_ID)) {
