@@ -7,7 +7,7 @@ send_announcement().then(() => {
 function send_announcement() {
     const Discord = require('discord.js');
     const client = new Discord.Client();
-    return client.login(process.env.CLIENT_ID).then(() => {
+    return client.login(process.env.CLIENT_TOKEN).then(() => {
         var guild = client.guilds.get(process.env.GUILD_ID);
         if (guild && guild.channels.get(process.env.CHANNEL_ID)) {
             guild.channels.get(process.env.CHANNEL_ID).send(
