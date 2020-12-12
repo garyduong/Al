@@ -1,5 +1,5 @@
 send_announcement().then(() => {
-    context.log('Weekly announcement was posted!')
+    console.log('Weekly announcement was posted!')
 }).catch(e => context.log(e));    
 
 // taken liberally from https://stackoverflow.com/questions/47548081/send-scheduled-message
