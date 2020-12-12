@@ -1,6 +1,6 @@
 send_announcement().then(() => {
     console.log('Weekly announcement was posted!')
-}).catch(e => context.log(e));    
+}).catch(e => console.log(e));    
 
 // taken liberally from https://stackoverflow.com/questions/47548081/send-scheduled-message
 // send notification of weekly games night
