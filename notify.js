@@ -6,8 +6,7 @@ var weekly = function (bot_token) {
         var guild = client.guilds.cache.get(process.env.GUILD_ID);
         if (guild && guild.channels.cache.get(process.env.CHANNEL_ID)) {
             guild.channels.cache.get(process.env.CHANNEL_ID).send(
-                'this is a test for my master ...'
-                // '@everyone There will be a games night Friday at 8. Please let us know if you can join!'
+                '@everyone There will be a games night Friday at 8. Please let us know if you can join!'
             ).then(() => client.destroy());
         }
     });
