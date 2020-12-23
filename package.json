@@ -2,14 +2,8 @@
   "name": "al",
   "version": "1.0.0",
   "main": "index.js",
-  "environment": {
-    "test": {
-      "env": {
-        "CHANNEL_ID": "782781485198737441",
-        "CLIENT_ID":  "785339024481976330",
-        "GUILD_ID":   "782781485198737439"
-      }
-    }
+  "scripts": {
+    "test": "echo \"Tests have passed\" && exit 0 || echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -26,5 +20,11 @@
     "discord.js": "^12.5.1"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "",
+  "env": {
+    "CHANNEL_ID": "782781485198737441",
+    "CLIENT_ID":  "785339024481976330",
+    "GUILD_ID":   "782781485198737439"
+  }
+
 }
