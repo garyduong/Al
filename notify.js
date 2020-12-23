@@ -11,3 +11,5 @@ var weekly = function (bot_token) {
         }
     });
 }
+
+module.exports.weekly = weekly;
