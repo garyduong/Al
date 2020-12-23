@@ -20,5 +20,14 @@
     "discord.js": "^12.5.1"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "",
+  "environments": {
+    "test": {
+      "env": {
+        "CHANNEL_ID": "782781485198737441",
+        "CLIENT_ID":  "785339024481976330",
+        "GUILD_ID":   "782781485198737439"
+      }
+    }
+  }
 }
