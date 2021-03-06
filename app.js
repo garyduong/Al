@@ -1,7 +1,32 @@
-var graph = require('./graph');
-var send = require('./notify');
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
-// send notification of weekly games night
-send.command(process.env.BOT_TOKEN).then(() => {
-    console.log('A command was invoked!');
-}).catch(e => console.log(e));
+client.once('ready', () => {
+    console.log('Ready!');
+});
+
+client.on('message', message => {
+    if (!message.content.startsWith(prefix) || message.author.bot) return;
+
+    const args = message.content.slice(prefix.length).trim().split(/ +/);
+    const command = args.shift().toLowerCase();
+
+    if (command === 'server') {
+        message.channel.send(
+            `Server name:${message.guild.name}\nTotal members:${message.guild.memberCount}`
+        )
+    }
+    else if (command === 'location') {
+        message.channel.send(`Server region:${message.guild.region}`)
+    }
+    else if (command === 'created') {
+        message.channel.send(`Date created:${message.guild.createdAt}`)
+    }
+    else if (command === 'user-info') {
+        message.channel.send(
+            `Your username:${message.author.username}\nYour ID:${message.author.id}`
+        )
+    }
+});
+
+client.login(process.env.BOT_TOKEN);
